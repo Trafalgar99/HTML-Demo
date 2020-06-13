@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="1.php" method="POST">
+      <!-- 应该以POST方式提交  -->
+      <fieldset>
+        <legend>hdr</legend>
+        <!-- input应该有名字 ，否则后台接收不到-->
+        <!-- 
+            input的属性：
+                required 表单必填
+                placeholder 提示语
+                value 默认值
+                maxlength 最大输入字符数量
+                size 输入框长度
+                readonly 只读属性
+                disable 禁用（不会发请求）
+                type：password 输入密码
+                type：mail  输入邮箱
+                type：url   输入网址
+                type：tel   输入电话
+                type：number 输入数值
+                type:hidden  隐藏表单
+                type：submi   提交按钮
+                type：radio  单选按钮
+                type：checkbox 多选按钮
+         -->
+        <label for="title">标题</label>
+        <!-- lable通过id与input关联 -->
+        <input type="text" name="title" id="title" required />
+        <label for="">
+          <!-- 直接嵌套也可以直接关联 -->
+          <input type="text" name="content" />
+        </label>
+        <input type="hidden" name="token" value="adasda" />
+      </fieldset>
+      <!-- 应该有提交按钮 -->
+      <button>提交</button>
+    </form>
+    <!-- 文本域（属性与input类似） -->
+    <form action="">
+      <label for=""
+        >介绍
+        <textarea name="info" id="" cols="30" rows="10">默认值</textarea>
+      </label>
+      <!-- 多选框
+                multiple 多选 
+                selected 初始值
+        -->
+      <label for="">
+        栏目
+        <select name="cat[]" id="" multiple>
+          <optgroup label="xinwen">
+            <option value="1">新闻</option>
+            <option value="2" selected>游戏</option>
+          </optgroup>
+        </select>
+      </label>
+    </form>
+    <!-- 文件上传 -->
+  </body>
+</html>
