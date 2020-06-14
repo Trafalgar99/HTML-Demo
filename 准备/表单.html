@@ -62,6 +62,52 @@
         </select>
       </label>
     </form>
-    <!-- 文件上传 -->
+    <!-- 日期在表单中的使用 
+          type: date
+          type: week
+          type: month
+          type：datetime-local
+          min   开始时间
+          mac   结束时间
+          step   步长
+
+    -->
+    <form action="" method="POST">
+      <input type="date" name="date" />
+      <button>ok</button>
+    </form>
+    <!-- 搜索框
+            type：search
+    -->
+    <form action="">
+      <input type="search" name="lizi" list="lesson" />
+      <datalist id="lesson">
+        <option value="MYSQL">数据库管理</option>
+        <option value="PHP">ccc</option>
+        <option value="Python">ccc</option>
+      </datalist>
+    </form>
+    <!-- 历史提示 
+            autocomplete="on"
+     -->
+    <form action="">
+      <input type="text" name="df" autocomplete="on" />
+    </form>
+    <!-- 三种列表 -->
+    <ol start="0">
+      <li>php</li>
+      <li>css</li>
+      <li>html</li>
+    </ol>
+    <ul>
+      <li>w</li>
+      <li>e</li>
+      <li>fd</li>
+    </ul>
+
+    <dl>
+      <dt>1</dt>
+      <dd>sdas</dd>
+    </dl>
   </body>
 </html>
